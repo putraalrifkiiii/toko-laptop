@@ -1,5 +1,4 @@
 import type { Product } from "@/data/products";
-import { LAPTOPS } from "@/data/products";
 
 /* ---------------------------------------------------------------------------
  * Mesin SPK — metode Simple Additive Weighting (SAW).
