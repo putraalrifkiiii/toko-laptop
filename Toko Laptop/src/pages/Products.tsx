@@ -132,7 +132,7 @@ export default function Products({
             />
           </div>
 
-          <Select value={sort} onValueChange={(v) => setParam("urut", v)}>
+          <Select value={sort} onValueChange={(v) => setParam("urut", v ?? "")}>
             <SelectTrigger
               className="w-48"
               data-testid="products-sort-select"
