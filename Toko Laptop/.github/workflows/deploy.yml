@@ -2,7 +2,10 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main] # Sesuaikan jika branch utama Anda 'master' atau 'main'
+    branches: [main]
+
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -14,16 +17,19 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: "npm"
+          cache-dependency-path: Toko Laptop/package-lock.json
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
+        working-directory: Toko Laptop
 
       - name: Build Project
         run: npm run build
+        working-directory: Toko Laptop
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist # Folder hasil build Vite
+          folder: Toko Laptop/dist
