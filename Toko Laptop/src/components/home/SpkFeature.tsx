@@ -52,7 +52,7 @@ export default function SpkFeature() {
                   Sistem kami menghitung skor kecocokan setiap laptop memakai
                   metode{" "}
                   <span className="font-mono text-zinc-300">
-                    Simple Additive Weighting (SAW)
+                    Analytical Hierarchy Process (AHP)
                   </span>
                   .
                 </p>

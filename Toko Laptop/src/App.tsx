@@ -6,7 +6,7 @@ import CompareTray from "@/components/CompareTray";
 import Home from "@/pages/Home";
 import Products from "@/pages/Products";
 import ProductDetail from "@/pages/ProductDetail";
-import Recommendation from "@/pages/Recommendation";
+// import Recommendation from "@/pages/Recommendation";
 import Cart from "@/pages/Cart";
 import Checkout from "@/pages/Checkout";
 
@@ -32,7 +32,7 @@ export default function App() {
             element={<Products mode="category" />}
           />
           <Route path="/promo" element={<Products mode="promo" />} />
-          <Route path="/rekomendasi" element={<Recommendation />} />
+          {/* <Route path="/rekomendasi" element={<Recommendation />} /> */}
           <Route path="/produk/:id" element={<ProductDetail />} />
           <Route path="/keranjang" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
