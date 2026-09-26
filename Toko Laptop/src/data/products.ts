@@ -1,9 +1,3 @@
-/* ---------------------------------------------------------------------------
- * Data produk statis — prototype UI, tanpa backend.
- * Kategori: laptop, pc-gaming, komponen, monitor, periferal.
- * Produk dengan field `spk` ikut dihitung dalam rekomendasi SPK (laptop).
- * ------------------------------------------------------------------------- */
-
 export type CategorySlug =
   | "laptop"
   | "pc-gaming"
@@ -14,13 +8,9 @@ export type CategorySlug =
 export type StockStatus = "in" | "low" | "out";
 
 export interface SpkSpec {
-  /** Skor CPU 0-100 (hand-tuned per model) */
   cpu: number;
-  /** Skor GPU 0-100 */
   gpu: number;
-  /** RAM dalam GB */
   ramGb: number;
-  /** Storage dalam GB */
   storageGb: number;
 }
 
@@ -44,7 +34,6 @@ export interface Product {
   tags: string[];
   description: string;
   specs: SpecRow[];
-  /** Hanya produk yang diikutkan dalam perhitungan SPK */
   spk?: SpkSpec;
 }
 
@@ -166,7 +155,6 @@ export const CATEGORY_LABEL: Record<CategorySlug, string> = {
   periferal: "Periferal",
 };
 
-/** Tile "Jelajahi Kategori" di homepage */
 export const HOME_TILES = [
   {
     label: "Gaming Laptop",
@@ -942,6 +930,7 @@ export const FEATURED_IDS = [
   "msi-aegis-r2",
   "asus-rog-strix-rtx-4070-super",
   "amd-ryzen-7-7800x3d",
+  "logitech-g-pro-x-tkl",
   "lg-ultragear-27gp850",
 ];
 

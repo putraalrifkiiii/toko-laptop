@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App.tsx";
 import { queryClient } from "@/lib/queryClients.ts";
@@ -16,10 +16,10 @@ createRoot(document.getElementById("root")!).render(
       <CartProvider>
         <SpkProvider>
           <CompareProvider>
-            <BrowserRouter>
+            <HashRouter>
               <App />
               <Toaster />
-            </BrowserRouter>
+            </HashRouter>
           </CompareProvider>
         </SpkProvider>
       </CartProvider>
