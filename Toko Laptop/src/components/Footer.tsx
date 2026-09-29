@@ -122,7 +122,7 @@ export default function Footer() {
                   to="/rekomendasi"
                   className="text-zinc-400 transition-colors hover:text-brand"
                 >
-                  Metode SAW
+                  Metode AHP (Analytical Hierarchy Process)
                 </Link>
               </li>
             </ul>
