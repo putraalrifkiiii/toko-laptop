@@ -163,7 +163,10 @@ function PairSelect({
   mobile?: boolean;
 }) {
   return (
-    <Select value={grid[i][j]} onValueChange={(v) => onChange(i, j, v)}>
+    <Select
+      value={grid[i][j] ?? ""}
+      onValueChange={(v) => onChange(i, j, v ?? "")}
+    >
       <SelectTrigger
         size="sm"
         data-testid={`ahp-pair-${CRITERIA_ORDER[i]}-${CRITERIA_ORDER[j]}`}

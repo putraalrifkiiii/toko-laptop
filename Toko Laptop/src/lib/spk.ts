@@ -1,5 +1,4 @@
 import type { Product } from "@/data/products";
-import { LAPTOPS } from "@/data/products";
 import {
   alternativePriorities,
   checkConsistency,
