@@ -14,7 +14,7 @@ export default function BrandStrip() {
             className="flex items-center gap-10 font-mono text-xs font-semibold uppercase tracking-[0.3em] text-zinc-600"
           >
             {brand}
-            <span className="text-brand/70">//</span>
+            <span className="text-brand/50">//</span>
           </span>
         ))}
       </div>
